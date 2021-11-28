@@ -20,6 +20,7 @@ pipeline {
 	   stage('Testing'){
 	        steps {
 	            echo 'Testing..'
+		    sh 'ifconfig enp0s3'
 	            }
 	   }
     }
