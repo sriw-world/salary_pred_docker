@@ -14,9 +14,7 @@ pipeline {
 	   }
 	   stage('Run Image') {
 	        steps {
-		def x = Math.abs(new Random().nextInt())
-		def y = "salarypred" + x.toString()
-	        sh 'sudo docker run -d -p 8501:8501 --name y salarypredapp:v1'
+	        sh 'sudo docker run -d -p 8501:8501 --name salarypred salarypredapp:v1'
 	        }
 	   }
 	   stage('Testing'){
